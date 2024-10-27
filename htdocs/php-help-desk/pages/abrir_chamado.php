@@ -31,13 +31,11 @@
           <div class="card-body">
             <div class="row">
               <div class="col">
-
                 <form method="post" action="../scripts/registra_chamado.php">
                   <div class="form-group">
                     <label>Título</label>
                     <input name="titulo" type="text" class="form-control" placeholder="Título">
                   </div>
-
                   <div class="form-group">
                     <label>Categoria</label>
                     <select name="categoria" class="form-control">
@@ -48,28 +46,32 @@
                       <option>Rede</option>
                     </select>
                   </div>
-
                   <div class="form-group">
                     <label>Descrição</label>
                     <textarea name="descricao" class="form-control" rows="3"></textarea>
                   </div>
-
                   <div class="row mt-5">
                     <div class="col-6">
                       <a class="btn btn-lg btn-warning btn-block" href="./home.php">Voltar</a>
                     </div>
-
                     <div class="col-6">
                       <button class="btn btn-lg btn-info btn-block" type="submit">Abrir</button>
                     </div>
                   </div>
                 </form>
-
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="row">
+      <? if (isset($_GET['resultado']) && $_GET['resultado'] == 'sucesso') { ?>
+        <span class="text-success text-center w-100 pt-3">Chamado criado com sucesso!</span>
+      <? } elseif (isset($_GET['resultado']) && $_GET['resultado'] == 'erro') { ?>
+        <span class="text-danger text-center w-100 pt-3">Erro ao criar chamado - dados inválidos.</span>
+      <? } ?>
     </div>
 </body>
 

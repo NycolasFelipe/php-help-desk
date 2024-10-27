@@ -5,6 +5,7 @@ session_start();
 $autenticado = false;
 $usuario_id = null;
 $usuario_perfil_id = null;
+$usuario_email = null;
 
 $perfis = array(
     1 => 'Administrativo',
@@ -24,6 +25,7 @@ foreach ($usuarios as $user) {
         $autenticado = true;
         $usuario_id = $user['id'];
         $usuario_perfil_id = $user['perfil_id'];
+        $usuario_email = $user['email'];
     }
 }
 
@@ -31,6 +33,7 @@ if ($autenticado) {
     $_SESSION['autenticado'] = true;
     $_SESSION['id'] = $usuario_id;
     $_SESSION['perfil_id'] = $usuario_perfil_id;
+    $_SESSION['email'] = $usuario_email;
 
     header('Location: ../pages/home.php');
 } else {
