@@ -1,6 +1,6 @@
 <?php
 $current_page = basename($_SERVER["REQUEST_URI"], ".php");
-$is_index_page = $current_page == "index" || $current_page == "php-help-desk";
+$is_index_page = str_contains($current_page, "index") || str_contains($current_page, "php-help-desk");
 ?>
 
 <nav class="navbar navbar-dark bg-dark">
@@ -15,15 +15,13 @@ $is_index_page = $current_page == "index" || $current_page == "php-help-desk";
     <ul class="navbar-nav d-flex flex-row align-items-center">
         <li class="nav-item">
             <p class="py-0 pr-4 m-0" style="color: rgba(255,255,255,.5); pointer-events: none;">
-                <?php
-                if (!$is_index_page) {
-                    echo isset($_SESSION['email']) ? $_SESSION['email'] : "";
-                }
-                ?>
+                <? if (!$is_index_page) echo isset($_SESSION['email']) ? $_SESSION['email'] : "" ?>
             </p>
         </li>
-        <li class="nav-item">
-            <a href="../scripts/logoff.php" class="nav-link">SAIR</a>
-        </li>
+        <? if (!$is_index_page) { ?>
+            <li class="nav-item">
+                <a href="../scripts/logoff.php" class="nav-link">SAIR</a>
+            </li>
+        <? } ?>
     </ul>
 </nav>
