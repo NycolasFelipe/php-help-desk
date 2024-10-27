@@ -11,7 +11,7 @@ Admin users can view and delete all tickets, whereas regular users can only cons
 Aplicação criada com o intuido de estudar e praticar a linguagem de programação back-end PHP.<br>
 Esta aplicação cria um sistema onde é possível a criação, consulta e exclusão de chamados criados por usuários.<br>
 
-Usuários podem ter 2 tipos de papéis na aplicação: **administradores** e **usuários comuns**<br>
+Usuários podem ter 2 tipos de papéis na aplicação: **administradores** e **usuários comuns**.<br>
 Administradores podem consultar e deletar todos os tickets, enquanto usuários comuns só podem gerenciar seus próprios tickets.
 
 #### Technical details [🇺🇸] | Informações técnicas [🇧🇷]
