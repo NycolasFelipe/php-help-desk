@@ -1,0 +1,5 @@
+1#Notebook com defeito#Hardware#nao liga
+2#Televisao nao liga#Hardware#nao liga
+4#Teste#Criação Usuário#123
+3#jose#Criação Usuário#nao consigo criar
+1#Erro na conexão#Rede#Erro ao conectar
